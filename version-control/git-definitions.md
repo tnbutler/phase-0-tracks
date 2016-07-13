@@ -15,3 +15,5 @@ A branch is a direction taken in changing the contents of a respository. With a 
 A commit is a git command to save the contents of a respository at a specific point in time. A good commit message briefly describes changes made since the last commit.
 
 A merge conflict occurs when git attempts to merge two branches, but the changes in question conflict with each other. This might occur if both branches have changed the same line.
+
+add word here
