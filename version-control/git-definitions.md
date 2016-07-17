@@ -16,4 +16,4 @@ A commit is a git command to save the contents of a respository at a specific po
 
 A merge conflict occurs when git attempts to merge two branches, but the changes in question conflict with each other. This might occur if both branches have changed the same line.
 
-add word here
+minor change
