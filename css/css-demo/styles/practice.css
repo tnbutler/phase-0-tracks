@@ -13,3 +13,7 @@
 .short-list {
 	font-size: .8em;
 }
+
+.short-list li:nth-child(1) {
+	font-weight: bolder;
+}
