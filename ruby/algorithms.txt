@@ -1,0 +1,20 @@
+Elevator agorithm:
+
+-Repeat:
+	-Prompt user for desired floor
+		-Until user inputs a desired floor
+			-Press button for desired floor
+
+
+Common task: making coffee:
+
+-Wait until 8:00 am
+-Open bag of ground coffee
+-Input how many cups of coffee desired (variable x)
+	-Pour x cups of water into machine container
+	-Scoop x tablespoons of coffee grounds and place in machine
+-Press coffee machine on button
+-Wait until coffee noise starts
+	-Wait until coffee noise stops
+		-Pour coffee
+
