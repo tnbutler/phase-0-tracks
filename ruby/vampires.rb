@@ -40,17 +40,17 @@ insurance = to_boolean(gets.chomp)
 
 
 
-if (name=="Drake Cula") || (name="Tu Fang")
+if (name=="Drake Cula") || (name=="Tu Fang")
 	puts "Definitely a vampire."
-elsif age_correct && (garlic || insurance)
-	puts "Probably not a vampire."
-elsif !age_correct && (!garlic || !insurance)
-	puts "Probably a vampire."
-elsif !age_correct && !garlic && !insurance
+elsif !age_correct(age, year_born) && !garlic && !insurance
 	puts "Almost certainly a vampire."
+elsif age_correct(age, year_born) && (garlic || insurance)
+	puts "Probably not a vampire."
+elsif !age_correct(age, year_born) && (!garlic || !insurance)
+	puts "Probably a vampire."
 else
 	puts "Results inconclusive."
-
+end
 
 
 
