@@ -1,3 +1,31 @@
-p {
-	background-color: purple;
+header {
+	display: block;
+	background-color: blue;
+	padding: 20px;
+	margin-bottom: 10px;
+}
+
+footer {
+	display: block;
+	background-color: blue;
+	padding: 20px;
+	margin-top: 10px;
+}
+
+.column-1 {
+	display: inline-block;
+	background-color: yellow;
+	width: 300px;
+	padding: 20px;
+	font-family: arial;
+}
+
+.column-2 {
+	display: inline-block;
+	width: 400px;
+	background-color: yellow;
+	vertical-align: top;
+	margin-left: 50px;
+	font-family: arial;
+
 }
