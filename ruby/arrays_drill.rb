@@ -1,5 +1,14 @@
+def build_array(x, y, z)
+	array = Array.new
+	array.push(x, y, z)
+	return array
+end
 
+def add_to_array(array, elem)
+	array.push(elem)
+end
 
+# initialize empty array
 ary = Array.new
 p ary
 
@@ -35,4 +44,12 @@ p ary2
 ary3 = ary.concat(ary2)
 p ary3
 
+# call build_array method
+ary4 = build_array(55, 66, 77)
+p ary4
 
+# add_to_array test calls
+ary5 = add_to_array(ary4, 88)
+p ary5
+
+p add_to_array(ary5, 99)
