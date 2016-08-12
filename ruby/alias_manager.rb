@@ -1,6 +1,6 @@
 #swaps first and last name
 def swap_names (name)
-	first_and_last = name.partition(' ')
+	first_and_last = name.downcase.partition(' ')
 	first_and_last[2] << ' ' << first_and_last[0]
 end
 
@@ -33,7 +33,7 @@ end
 # creates new alias by swapping first and last name, then next vowel, and next consonant
 def create_alias(name)
 	full_name = swap_names(name)
-	full_name_ary = fullname.split('')
+	full_name_ary = full_name.split('')
 	vowels = "aeiou".split('')
 	consonants = "bcdfghjklmnpqrstvwxyz".split('')
 
@@ -44,10 +44,37 @@ def create_alias(name)
 			full_name_ary[i] = next_consonant(full_name_ary[i])
 		end
 	end
-	return full_name_ary.join('')
+	return capitalize_names(full_name_ary.join(''))
 end
 
-puts create_alias("tom butler")
+# capitalizes first letter of each name and returns capitalized name
+def capitalize_names(name)
+	first_and_last = name.partition(' ')
+	first = first_and_last[0].capitalize
+	last = first_and_last[2].capitalize
+	first << ' ' << last
+end
+
+
+puts "Enter your name, and alias will be created. Type 'quit' to quit."
+name = gets.chomp
+
+
+hash_of_names = {}
+until name == "quit"
+	fake_name = create_alias(name)
+	puts fake_name
+	hash_of_names.merge!({name => fake_name})
+	puts "Enter your name, and alias will be created. Type 'quit' to quit."
+	name = gets.chomp
+end
+
+hash_of_names.each { |name, fake_name|
+	puts "#{name} is also known as #{fake_name}."
+}
+
+
+
 
 
 
