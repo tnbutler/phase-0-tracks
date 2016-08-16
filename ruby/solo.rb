@@ -35,15 +35,48 @@ class Therapy_bot
 
 end
 
-tbot = Therapy_bot.new("Tbot", 5, 100)
 
+
+=begin
+# test code:
+tbot = Therapy_bot.new("Tbot", 5, 100)
 tbot.do_therapy
 tbot.do_meditation
 tbot.charge_money(10)
 p "name: #{tbot.bot_name} depression score: #{tbot.depression_score} balance: #{tbot.cash_balance}"
+=end
 
 
+# allowing user to create therapy bots
 
+tbot_ary = []
+
+p "Welcome to therapy bot creator. To begin, enter the name of your bot. Type 'done' to quit."
+name = gets.chomp
+
+until name == "done"
+
+	p "Now enter your depression score (1-10, 10=most depressed)."
+	depression_score = gets.chomp.to_i
+
+	p "Now enter your cash balance."
+	cash_balance = gets.chomp.to_f
+
+	tbot = Therapy_bot.new(name, depression_score, cash_balance)
+	tbot_ary << tbot
+
+	p "Now enter the name of your next therapy bot. Type 'done' to quit."
+	name = gets.chomp
+
+end
+
+# iterating through array to print attributes of each bot
+tbot_ary.each { |tbot_instance| 
+	p ' '
+	p 'Name of bot: #{tbot_instance.bot_name}'
+	p 'Depression score: #{tbot_instance.depression_score}'
+	p 'Cash balance: #{tbot_instance.cash_balance}'
+}
 
 
 
