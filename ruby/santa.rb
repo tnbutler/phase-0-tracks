@@ -1,7 +1,14 @@
+
+
+
 class Santa
 
-	def initialize 
+	def initialize(gender, ethnicity)
 		p "initializing santa instance..."
+		@gender = gender
+		@ethnicity = ethnicity
+		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		@age = 0
 	end
 
 	def speak 
@@ -15,8 +22,20 @@ class Santa
 end
 
 
+santas = []
+santas << Santa.new("male", "black")
+santas << Santa.new("pangender", "Latino")
+santas << Santa.new("bigender", "white")
+santas << Santa.new("male", "Japanese")
+santas << Santa.new("female", "prefer not to say")
+santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
 
-santa1 = Santa.new
+p santas[1]
 
-santa1.speak
-santa1.eat_milk_and_cookies("chocolate chip cookie")
+
+
+
+
+
+
+
