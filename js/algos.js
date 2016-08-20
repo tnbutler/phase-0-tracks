@@ -12,7 +12,7 @@ function ReturnLongestString(str_ary) {
 			max_length = str_ary[i].length;
 			max_index = i;
 		}
-
+ 
 	}
 	return str_ary[max_index];
 }
