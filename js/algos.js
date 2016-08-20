@@ -37,15 +37,11 @@ function KeyValueMatch(object1, object2) {
 	return match;
 }
 
-
-// Write a function that takes an integer for length, and builds and returns an array of strings of the given length. So if we ran your function with an argument of 3, we would get an array of 3 random words back (the words don't have to be actual sensical English words -- "nnnnfph" totally counts). The words should be of randomly varying length, with a minimum of 1 letter and a maximum of 10 letters. (This involves a new trick, generating a random number, that you'll have to look up, but the solution on how to do so is relatively straightforward.)
-// Add driver code that does the following 10 times: generates an array, prints the array, feeds the array to your "longest word" function, and prints the result.
-
-
-// function: RandomStrArray(ary_length)
+// function: RandomStrArray(array length)
 // input: integer for array length
 // output: an array of strings of random length with min 1 letter and max 10 letters
 // how to: for loop running (array length) times; each time generate a string of a random 1-10 letters using a random number generator from 0 -> 25 index corresponding to a random character in the alphabet; push each string into an array; return the array
+
 
 function RandomStrArray(ary_length) {
 	var letters = "abcdefghijklmnopqrstuvwxyz",
@@ -66,11 +62,21 @@ function RandomStrArray(ary_length) {
 }
 
 
-console.log(RandomStrArray(4));
+// Add driver code that does the following 10 times: generates an array, prints the array, feeds the array to your "longest word" function, and prints the result.
+
+var str_ary = [];
+for (i=1; i <= 10; i++) {
+	str_ary = RandomStrArray(i);
+	console.log("Generated array: ", str_ary);
+	console.log("The longest word is: ", ReturnLongestString(str_ary));
+}
 
 
 
 
+
+
+// test code
 // var random_char = "A";
 // var letters = "abcdefghijklmnopqrstuvwxyz";
 
