@@ -38,24 +38,53 @@ function KeyValueMatch(object1, object2) {
 }
 
 
-obj1 = {name: "Bob", age: 54};
-obj2 = {name: "Fred", age: 54};
-
-// for (var key in obj1) {
-//   if (obj1.hasOwnProperty(key)) {
-//     console.log(key + " -> " + obj1[key]);
-//   }
-// }
+// Write a function that takes an integer for length, and builds and returns an array of strings of the given length. So if we ran your function with an argument of 3, we would get an array of 3 random words back (the words don't have to be actual sensical English words -- "nnnnfph" totally counts). The words should be of randomly varying length, with a minimum of 1 letter and a maximum of 10 letters. (This involves a new trick, generating a random number, that you'll have to look up, but the solution on how to do so is relatively straightforward.)
+// Add driver code that does the following 10 times: generates an array, prints the array, feeds the array to your "longest word" function, and prints the result.
 
 
-console.log(KeyValueMatch(obj1, obj2));
+// function: RandomStrArray(ary_length)
+// input: integer for array length
+// output: an array of strings of random length with min 1 letter and max 10 letters
+// how to: for loop running (array length) times; each time generate a string of a random 1-10 letters using a random number generator from 0 -> 25 index corresponding to a random character in the alphabet; push each string into an array; return the array
+
+function RandomStrArray(ary_length) {
+	var letters = "abcdefghijklmnopqrstuvwxyz",
+		str = "",
+		ary_of_str = [],
+		random_str_length = 0;
+
+	for (j=0; j < ary_length; j++) {
+		random_str_length = Math.floor(Math.random() * (10 - 1)) + 1;
+		for (i=0; i < random_str_length; i++) {
+			str += letters[Math.floor(Math.random() * (25 - 0)) + 0];
+		}
+		ary_of_str.push(str);
+		str = "";
+	}
+
+	return ary_of_str;
+}
+
+
+console.log(RandomStrArray(4));
+
+
+
+
+// var random_char = "A";
+// var letters = "abcdefghijklmnopqrstuvwxyz";
+
+// random_char = letters[Math.floor(Math.random() * (25 - 0)) + 1]
+
+// console.log(random_char);
+
+// obj1 = {name: "Bob", age: 54};
+// obj2 = {name: "Fred", age: 54};
+
+// console.log(KeyValueMatch(obj1, obj2));
 
 
 
 
 
-// var str_ary = ["blah", "blahssds", "blahss", "s"];
-// console.log(ReturnLongestString(str_ary));
 
-// str_ary = ["12345", "12", "1234"];
-// console.log(ReturnLongestString(str_ary));
