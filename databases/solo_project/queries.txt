@@ -1,0 +1,34 @@
+
+
+Display the information in one table (either table is fine).
+SELECT * FROM bball_players;
+1|Curry|25|true|2
+2|Shaq|44|false|5
+3|Duncan|39|true|5
+
+
+Update an item that meets some condition (you can choose a condition that makes sense).
+UPDATE bball_players SET age=26 WHERE name="Curry";
+
+Display the information in both tables using one query.
+SELECT * FROM bball_players, positions WHERE bball_players.position_id = positions.id;
+1|Curry|26|true|2|2|Shooting Guard
+2|Shaq|44|false|5|5|Center
+3|Duncan|39|true|5|5|Center
+
+Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+SELECT bball_players.name, positions.position FROM bball_players JOIN positions ON bball_players.position_id=positions.id;
+Curry|Shooting Guard
+Shaq|Center
+Duncan|Center
+
+Delete an item that meets some condition (you can choose a condition that makes sense).
+DELETE FROM bball_players WHERE name="Curry";
+
+SELECT bball_players.name, positions.position FROM bball_players LEFT JOIN positions ON bball_players.position_id=positions.id;
+Shaq|Center
+Duncan|Center
+
+SELECT bball_players.name, positions.position FROM bball_players INNER JOIN positions ON bball_players.position_id=positions.id;
+Shaq|Center
+Duncan|Center
