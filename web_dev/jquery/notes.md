@@ -1,0 +1,3 @@
+I will look up several short youtube videos on jquery and then use a previous html/css project in order to implement a few functions from the jquery library. I will also look at jquery code and attempt to learn what I can about what can be done.
+
+What was most effective was coding while listening to videoes, stopping when things did not work or when they were confusing, and then looking for explanations, not always successfully.
